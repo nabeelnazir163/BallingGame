@@ -1499,7 +1499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile_prefbabs:
-  - {fileID: 1793920947303636, guid: bcea095f2ce596f428d36c06709a8aa6, type: 2}
+  - {fileID: 0}
 --- !u!4 &1678069500
 Transform:
   m_ObjectHideFlags: 0
