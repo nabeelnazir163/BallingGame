@@ -753,7 +753,6 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -1244,7 +1243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile_prefbabs:
-  - {fileID: 0}
+  - {fileID: 1081745121053412, guid: bcea095f2ce596f428d36c06709a8aa6, type: 2}
 --- !u!4 &1678069500
 Transform:
   m_ObjectHideFlags: 0
