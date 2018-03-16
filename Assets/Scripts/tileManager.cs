@@ -21,7 +21,7 @@ public class tileManager : MonoBehaviour {
 
 		activeTiles = new List<GameObject>();
 
-		playerTransform = GameObject.FindGameObjectWithTag ("Player").transform;
+		playerTransform = GameObject.FindGameObjectWithTag ("Model").transform;
 
 		for (int i = 0; i < amountOFTilesOnScreen; i++) 
 		{

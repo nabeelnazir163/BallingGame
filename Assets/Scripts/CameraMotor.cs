@@ -11,7 +11,7 @@ public class CameraMotor : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		lookAt = GameObject.FindGameObjectWithTag ("Player").transform; 
+		lookAt = GameObject.FindGameObjectWithTag ("Model").transform; 
 		startOffset = transform.position - lookAt.position;
 	}
 	
