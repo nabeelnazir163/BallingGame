@@ -15,4 +15,9 @@ public class manager : MonoBehaviour {
 	{
 		pauseMenu.SetActive (!pauseMenu.activeSelf);
 	}
+
+	public void tiltbar()
+	{
+			
+	}
 }
