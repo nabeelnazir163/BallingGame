@@ -12,7 +12,7 @@ public class tileManager : MonoBehaviour {
 	private float tile_Length = 200.0f;
 	private int amountOFTilesOnScreen = 3;
 
-	private float safeZone = 150.0f;
+	private float safeZone = 350.0f;
 
 	private List<GameObject> activeTiles;
 
