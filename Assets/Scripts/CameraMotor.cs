@@ -24,7 +24,7 @@ public class CameraMotor : MonoBehaviour {
 		moveVector.x = 0;
 
 		//Y
-		moveVector.y = Mathf.Clamp(moveVector.y, 80, 100 );
+		moveVector.y = Mathf.Clamp(moveVector.y, 50, 100 );
 		//Z
 
 		transform.position = moveVector;
