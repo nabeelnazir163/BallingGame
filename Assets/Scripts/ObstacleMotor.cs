@@ -20,7 +20,7 @@ public class ObstacleMotor : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		moveVector = Vector3.zero;
+	/*	moveVector = Vector3.zero;
 
 		speed = speed + 0.01f;
 
@@ -37,9 +37,9 @@ public class ObstacleMotor : MonoBehaviour {
 		moveVector.y = VerticalVilocity;
 
 		//Z - forward and backward
-		moveVector.z = speed;
+		moveVector.z = speed; */
 	
 
-		controller.Move ((moveVector )* Time.deltaTime);
+		controller.Move (Vector3.fwd * Time.deltaTime);
 	}
 }

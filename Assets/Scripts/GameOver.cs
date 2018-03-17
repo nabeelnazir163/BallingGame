@@ -5,6 +5,9 @@ public class GameOver : MonoBehaviour {
 
 	void onTriggerEnter2D(Collider2D other)
 	{
-		Application.LoadLevel ("MainMenu");
+		if (other.gameObject.name == "Bar") 
+		{
+			Application.LoadLevel ("MainMenu");
+		}
 	}
 }
