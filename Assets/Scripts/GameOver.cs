@@ -3,11 +3,16 @@ using UnityEngine;
 
 public class GameOver : MonoBehaviour {
 
-	void onTriggerEnter2D(Collider2D other)
+	private	void onCollisionEnter(Collision col)
 	{
-		if (other.gameObject.name == "Bar") 
+		if (col.gameObject.name == "ball") 
 		{
-			Application.LoadLevel ("MainMenu");
+			Destroy (col.gameObject);
 		}
+	}
+
+	private void OnTriggerEnter ( Collider other)
+	{
+		Destroy (other.gameObject);
 	}
 }
