@@ -94,7 +94,10 @@ public class UserInterfaceButtons : MonoBehaviour
     public void ScaleUpButton()
     {
         // transform.localScale += new Vector3(scalingSpeed, scalingSpeed, scalingSpeed);
-        GameObject.FindWithTag("Model").transform.localScale += new Vector3(scalingSpeed, scalingSpeed, scalingSpeed);
+        //GameObject.FindWithTag("Model").transform.localScale += new Vector3(scalingSpeed, scalingSpeed, scalingSpeed);
+
+        GameObject.FindWithTag("Model").transform.Translate(0, translationSpeed * Time.deltaTime, 0);
+        GameObject.FindWithTag("Model").transform.Rotate(0, 0, -translationSpeed * Time.deltaTime);
     }
 
     public void ScaleUpButtonRepeat()
@@ -169,20 +172,32 @@ public class UserInterfaceButtons : MonoBehaviour
 
     public void ScaleDownButton()
     {
-        // transform.localScale += new Vector3(-scalingSpeed, -scalingSpeed, -scalingSpeed);
-        GameObject.FindWithTag("Model").transform.localScale += new Vector3(-scalingSpeed, -scalingSpeed, -scalingSpeed);
+        //// transform.localScale += new Vector3(-scalingSpeed, -scalingSpeed, -scalingSpeed);
+        //GameObject.FindWithTag("Model").transform.localScale += new Vector3(-scalingSpeed, -scalingSpeed, -scalingSpeed);
+
+        if (GameObject.FindWithTag("Model").transform.position.y > 0)
+        {
+            //GameObject.FindWithTag("Model").transform.Translate(0, -translationSpeed * Time.deltaTime, 0);
+            GameObject.FindWithTag("Model").transform.Translate(0, -translationSpeed * Time.deltaTime, 0);
+            GameObject.FindWithTag("Model").transform.Rotate(0, 0, translationSpeed * Time.deltaTime);
+        }
     }
 
     public void PositionUpButton()
     {
-            GameObject.FindWithTag("Model").transform.Translate(0, translationSpeed * Time.deltaTime, 0);
+        //GameObject.FindWithTag("Model").transform.Translate(0, translationSpeed * Time.deltaTime, 0);
+        GameObject.FindWithTag("Model").transform.Translate(0, translationSpeed * Time.deltaTime, 0);
+        GameObject.FindWithTag("Model").transform.Rotate(0, 0, translationSpeed * Time.deltaTime);
+        
     }
 
     public void PositionDownButton()
     {
         if (GameObject.FindWithTag("Model").transform.position.y > 0)
         {
+            //GameObject.FindWithTag("Model").transform.Translate(0, -translationSpeed * Time.deltaTime, 0);
             GameObject.FindWithTag("Model").transform.Translate(0, -translationSpeed * Time.deltaTime, 0);
+            GameObject.FindWithTag("Model").transform.Rotate(0, 0, -translationSpeed * Time.deltaTime);
         }
     }
 
