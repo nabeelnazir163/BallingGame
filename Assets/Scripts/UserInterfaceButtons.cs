@@ -175,13 +175,15 @@ public class UserInterfaceButtons : MonoBehaviour
 
     public void PositionUpButton()
     {
-        GameObject.FindWithTag("Model").transform.Translate(0, translationSpeed * Time.deltaTime, 0);
+            GameObject.FindWithTag("Model").transform.Translate(0, translationSpeed * Time.deltaTime, 0);
     }
 
     public void PositionDownButton()
     {
-
-        GameObject.FindWithTag("Model").transform.Translate(0, -translationSpeed * Time.deltaTime, 0);
+        if (GameObject.FindWithTag("Model").transform.position.y > 0)
+        {
+            GameObject.FindWithTag("Model").transform.Translate(0, -translationSpeed * Time.deltaTime, 0);
+        }
     }
 
     public void PositionRightButton()
